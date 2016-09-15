@@ -35,8 +35,6 @@ int main(int argc, char** args){
 	char nextstate[LEN];
 	int loop = 10;
 	toprint[LEN]='\0';
-
-	srand(time(NULL));
 	if(argc==1){
 		rule=0XAA;
 	}else{
@@ -52,7 +50,7 @@ int main(int argc, char** args){
 		state[i]= 0;
 
 	}
-
+	state[LEN/2]=1;
 	for(i =0;i<loop;i++){
 		nextstate[0]=eval(0,state[0],state[1]);
 		for(j =1;j<LEN-1;j++){
