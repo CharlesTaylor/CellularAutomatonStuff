@@ -9,9 +9,9 @@ char eval(char a, char b, char c){
 	unsigned char mask = 0X01;
 	unsigned char val = 0;
 	unsigned int i;
-	a=a&&mask;
-	b=b&&mask;
-	c=c&&mask;
+	a=a&mask;
+	b=b&mask;
+	c=c&mask;
 
 	val = val | a;
 	val= val << 1;
